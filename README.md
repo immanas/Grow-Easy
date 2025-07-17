@@ -76,7 +76,7 @@ GrowEasy transforms raw Shopify store data into **actionable insights** using a 
 ![EventBridge Rule](./EventBridgeRule.png)  
 ![S3 CSV Export](./S3Product..csv.png)  
 ![SageMaker Notebook](./sagemaker_notebook.png)  
-![SageMaker JupyterLab](./sagemaker_jupyterlab.png)  
+![SageMaker JupyterLab](sagemaker_jupyterlab.png)  
 ![SNS Alert](./SNSalert.png.jpg)
 
 ---
