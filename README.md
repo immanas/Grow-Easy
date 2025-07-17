@@ -4,12 +4,12 @@
 
 ## 🛍️ What is Shopify?
 
-[Shopify](https://www.shopify.com) is a popular **e-commerce platform** that allows anyone to easily create and manage an online store.  
+[Shopify](https://www.shopify.com) is a popular **e-commerce platform** that allows anyone to easily create and manage an online store.  shopify dashbord.png.png
 It helps businesses sell products, track orders, manage inventory, and handle payments — all in one place.
 
 Think of it like a **digital shopping mall** that gives store owners everything they need to run a business online, without writing code.
 :
-Here is my shopify patner developer account ![GrowEasy](shopify.png)
+Here is my shopify patner developer account ![GrowEasy](shopifydashbord.png.png)
 Here is my shopify admin accoun where I have added Webhkok account ![GrowEasy-store](.png)
 
 
