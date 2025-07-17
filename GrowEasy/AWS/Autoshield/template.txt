@@ -1,0 +1,84 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  🛡️ AutoShield – Real-time AWS Resource Exposure Monitor & Alert System
+
+  AutoShield is a serverless security automation system that monitors AWS resources for misconfigurations
+  (like public S3 buckets, open security group ports, etc.) using AWS Config. When a violation is detected,
+  it triggers a Lambda function via EventBridge, logs the event to DynamoDB, and sends alerts via SNS.
+
+Globals:
+  Function:
+    Timeout: 10
+    Runtime: python3.10
+
+Resources:
+
+  # 🚨 SNS Topic for Alerts
+  AlertSNSTopic:
+    Type: AWS::SNS::Topic
+    Properties:
+      TopicName: autoshield-alerts
+
+  # 🛠️ DynamoDB Table for Logging Violations
+  ViolationLogTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: AutoShieldViolations
+      AttributeDefinitions:
+        - AttributeName: violationId
+          AttributeType: S
+      KeySchema:
+        - AttributeName: violationId
+          KeyType: HASH
+      BillingMode: PAY_PER_REQUEST
+
+  # 🧠 Lambda Function to Handle Events
+  AutoShieldHandler:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: AutoShieldHandler
+      Handler: lambda_function.lambda_handler
+      CodeUri: ./lambda/
+      Policies:
+        - AmazonDynamoDBFullAccess
+        - SNSPublishMessagePolicy:
+            TopicName: autoshield-alerts
+      Environment:
+        Variables:
+          ALERT_TOPIC_ARN: !Ref AlertSNSTopic
+          DDB_TABLE_NAME: !Ref ViolationLogTable
+      Events:
+        ConfigComplianceEvent:
+          Type: EventBridgeRule
+          Properties:
+            Pattern:
+              source:
+                - "aws.config"
+              detail-type:
+                - "Config Rules Compliance Change"
+
+  # 🔐 IAM Policy: Allow Lambda to publish to SNS topic
+  SNSPublishMessagePolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      Description: Allow Lambda to publish to alert SNS topic
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Action: sns:Publish
+            Resource: "*"
+
+Outputs:
+  LambdaFunction:
+    Description: AutoShield Lambda Handler Function
+    Value: !Ref AutoShieldHandler
+
+  DynamoDBTable:
+    Description: DynamoDB table for logging compliance violations
+    Value: !Ref ViolationLogTable
+
+  AlertTopicARN:
+    Description: SNS Topic ARN for alert notifications
+    Value: !Ref AlertSNSTopic
