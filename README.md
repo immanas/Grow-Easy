@@ -10,7 +10,6 @@ It helps businesses sell products, track orders, manage inventory, and handle pa
 Think of it like a **digital shopping mall** that gives store owners everything they need to run a business online, without writing code.
 :
 Here is my shopify patner developer account ![GrowEasy](shopifydashbord.png)
-Here is my shopify admin accoun where I have added Webhkok account ![GrowEasy-store](.png)
 
 
 
@@ -47,7 +46,7 @@ Here is my shopify admin accoun where I have added Webhkok account ![GrowEasy-st
 ## 🚀 Full System Architecture 
 GrowEasy transforms raw Shopify store data into **actionable insights** using a fully serverless, AI-driven AWS pipeline.
 🧠 Built entirely using modern AI & cloud-native AWS technologies:
-### 📥 1. Shopify ➝ AWS Ingestion Layer
+### 🔄 1. Webhook Data Collection
 
 | 🔧 Component                 | ⚙️ Technology                  | 🔍 Purpose                                                       |
 |----------------------------|------------------------------|------------------------------------------------------------------|
@@ -56,6 +55,12 @@ GrowEasy transforms raw Shopify store data into **actionable insights** using a 
 | ⚙️ Lambda Webhook Handler  | AWS Lambda                   | Parses webhook data and stores it in DynamoDB                   |
 | 💾 Raw Data Storage        | DynamoDB (GrowEasyWebhookLogs)| Stores incoming order/product data for further analysis          |
 
+**📷 Diagram: Webhook Flow**  
+![Shopify Dashboard](./shopifydashbord.png)  
+![API Gateway Flow](./api_gateway_event.png)  
+![DynamoDB Tables](./dynamodb_tables.png)
+
+---
 
 ### ⏱️ 2. Scheduled ML Pipeline (AutoPipeline)
 
@@ -67,7 +72,14 @@ GrowEasy transforms raw Shopify store data into **actionable insights** using a 
 | 📊 Forecast Storage         | DynamoDB (ProductAnalytics) | Saves forecast results per product                              |
 | 📤 Notifications (Optional) | Amazon SNS                  | Sends alerts for low stock or demand spikes                     |
 
+**📷 Diagram: AutoPipeline ML Workflow**  
+![EventBridge Rule](./EventBridgeRule.png)  
+![S3 CSV Export](./S3Product..csv.png)  
+![SageMaker Notebook](./sagemaker_notebook.png)  
+![SageMaker JupyterLab](./sagemaker_jupyterlab.png)  
+![SNS Alert](./SNSalert.png.jpg)
 
+---
 
 ### 📈 3. Real-Time Dashboard
 
@@ -78,7 +90,11 @@ GrowEasy transforms raw Shopify store data into **actionable insights** using a 
 | 🔗 API Layer              | AWS API Gateway + Lambda     | Fetches latest forecast data from DynamoDB                      |
 | 🔒 Security + Tracing     | IAM, CloudWatch, X-Ray       | Role-based access control and monitoring/tracing                |
 
+**📷 Screenshot: GrowEasy Dashboard UI**  
+![Dashboard View](./Dashbord.png)  
+![Dashboard Settings](./dashborseeting.png)
 
+---
 
 ### 🛠️ DevOps & Monitoring
 
@@ -88,6 +104,9 @@ GrowEasy transforms raw Shopify store data into **actionable insights** using a 
 | 📊 Monitoring         | Amazon CloudWatch              | Tracks logs, metrics, invocations, errors      |
 | 💥 DLQ                | Lambda DLQs                   | Stores failed events for debugging             |
 | 🔎 X-Ray              | AWS X-Ray                      | Full trace of requests across services         |
+
+**📷 Diagram: Monitoring & Logging**  
+![CloudWatch Logs](./cloudwatch_logs.png)
 
 ---
 
