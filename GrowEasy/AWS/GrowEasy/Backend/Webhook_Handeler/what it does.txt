@@ -1,1 +1,0 @@
-📩 Handles Shopify events, it helps to take instant update from store and help to store it in DynamoDB
