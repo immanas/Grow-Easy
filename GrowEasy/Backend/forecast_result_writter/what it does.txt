@@ -1,0 +1,1 @@
+📝 Stores LSTM predictions to DynamoDB

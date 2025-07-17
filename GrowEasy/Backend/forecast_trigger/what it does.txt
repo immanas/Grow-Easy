@@ -1,0 +1,1 @@
+This Lambda function runs automatically every hour via EventBridge. It processes raw product data from DynamoDB, performs analytics/aggregation, and stores the summary in the ProductAnalytics table for dashboard insights.

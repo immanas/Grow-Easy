@@ -1,0 +1,10 @@
+shopify patner app
+api key(clint id) : 3f2ddd94565b6xxxxxxxxxxxxxxxx
+api secrect (client secrect) : a929f308fff15xxxxxxxxxx 
+token :36c587121aff6553cxxxxxxxxxxxxxxxxx
+
+shopify admin app
+
+TOKEN : shpat_d65f08f34xxxxxxxxxxx
+api key: 653c68f6eb2ffxxxxxxxxxxxxxxxxxxx
+API secrect key: 7d6796ecf83fxxxxxxxxxx
