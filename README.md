@@ -10,6 +10,8 @@ It helps businesses sell products, track orders, manage inventory, and handle pa
 Think of it like a **digital shopping mall** that gives store owners everything they need to run a business online, without writing code.
 
 Here is my shopify patner developer account :
+
+
 ![GrowEasy](shopifydashbord.png)
 
 
@@ -49,7 +51,9 @@ GrowEasy transforms raw Shopify store data into **actionable insights** using a 
 | ⚙️ Lambda Webhook Handler  | AWS Lambda                   | Parses webhook data and stores it in DynamoDB                   |
 | 💾 Raw Data Storage        | DynamoDB (GrowEasyWebhookLogs)| Stores incoming order/product data for further analysis          |
 
-**📷 Diagram: Webhook Flow**   
+**📷 Diagram: Webhook Flow**
+
+
 ![API Gateway Flow](./api_gateway_event.png)  
 ![DynamoDB Tables](./dynamodb_tables.png)
 
@@ -65,12 +69,6 @@ GrowEasy transforms raw Shopify store data into **actionable insights** using a 
 | 📊 Forecast Storage         | DynamoDB (ProductAnalytics) | Saves forecast results per product                              |
 | 📤 Notifications (Optional) | Amazon SNS                  | Sends alerts for low stock or demand spikes                     |
 
-**📷 Diagram: AutoPipeline ML Workflow**  
-![EventBridge Rule](./EventBridgeRule.png)  
-![S3 CSV Export](./S3Product..csv.png)  
-![SageMaker Notebook](./sagemaker_notebook.png)  
-![SageMaker JupyterLab](sagemaker_jupyterlab.png)  
-![SNS Alert](./SNSalert.png.jpg)
 
 ---
 
@@ -83,7 +81,9 @@ GrowEasy transforms raw Shopify store data into **actionable insights** using a 
 | 🔗 API Layer              | AWS API Gateway + Lambda     | Fetches latest forecast data from DynamoDB                      |
 | 🔒 Security + Tracing     | IAM, CloudWatch, X-Ray       | Role-based access control and monitoring/tracing                |
 
-**📷 Screenshot: GrowEasy Dashboard UI**  
+**📷 Screenshot: GrowEasy Dashboard UI**
+
+
 ![Dashboard View](./Dashbord.png)  
 ![Dashboard Settings](./dashborseeting.png)
 
@@ -98,7 +98,10 @@ GrowEasy transforms raw Shopify store data into **actionable insights** using a 
 | 💥 DLQ                | Lambda DLQs                   | Stores failed events for debugging             |
 | 🔎 X-Ray              | AWS X-Ray                      | Full trace of requests across services         |
 
-**📷 Diagram: Monitoring & Logging**  
+
+**📷 Diagram: Monitoring & Logging via CloudWatch**  
+
+
 ![CloudWatch Logs](./cloudwatch_logs.png)
 
 ---
