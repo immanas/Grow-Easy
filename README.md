@@ -82,10 +82,12 @@ GrowEasy transforms raw Shopify store data into **actionable insights** using a 
 | 🔒 Security + Tracing     | IAM, CloudWatch, X-Ray       | Role-based access control and monitoring/tracing                |
 
 **📷 Screenshot: GrowEasy Dashboard UI**
+This dashboard is built specifically for retail business owners and inventory managers to monitor forecasted demand, stock levels, and price recommendations in real-time. But, Now here ,
+Dashboard fully developed and owned by me as part of the GrowEasy AI-powered retail platform. Responsible for architecture, design, data integration, and deployment.
+🔗 [Live Dashboard Demo](https://your-demo-link.com) — You can explore the working example here.
 
-
-![Dashboard View](./Dashbord.png)  
-![Dashboard Settings](./dashborseeting.png)
+![Dashbord view](./Dashbord.png)  
+![Dashboard Settings](./dashbordseetings.png)
 
 ---
 
