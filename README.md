@@ -6,7 +6,6 @@
 
 [Shopify](https://www.shopify.com) is a popular **e-commerce platform** that allows anyone to easily create and manage an online store.  shopify dashbord.png.png
 It helps businesses sell products, track orders, manage inventory, and handle payments — all in one place.
-
 Think of it like a **digital shopping mall** that gives store owners everything they need to run a business online, without writing code.
 
 Here is my shopify patner developer account :
@@ -29,6 +28,7 @@ GrowEasy is designed to integrate seamlessly with various e-commerce platforms t
 - **Magento (Adobe Commerce)** – Suitable for enterprise retailers looking to leverage machine learning for inventory and demand prediction at scale.
 
 
+**✅ I choosed shopify here to complete my project**
 
 
 ## 🤔 Why GrowEasy? — Problem vs Solution
@@ -55,6 +55,17 @@ GrowEasy is designed to integrate seamlessly with various e-commerce platforms t
 ## 🚀 Full System Architecture 
 GrowEasy transforms raw Shopify store data into **actionable insights** using a fully serverless, AI-driven AWS pipeline.
 🧠 Built entirely using modern AI & cloud-native AWS technologies:
+
+### 🔄 Pre-AWS Steps in GrowEasy Integration
+
+| 🔢 Step | 📝 Description | 🔍 Why It Matters |
+|--------|----------------|-------------------|
+| **1️⃣ Create App using Shopify Partner Dashboard** | You create the GrowEasy app inside the Shopify Partner portal. This gives you app credentials (API Key/Secret), scopes, and the ability to install it on a store. | Required to define permissions like `read_products`, and to enable installation into merchant stores. |
+| **2️⃣ Install the App in a Merchant’s Store** | The merchant (store owner) installs the GrowEasy app via a secure install link (OAuth or manual). | App is now authorized to access that specific store’s product and inventory data. |
+| **3️⃣ Register Webhooks using Shopify Admin API** | After install, your app calls the Admin API to register webhook topics like `products/create` and `products/update`. | These webhooks let Shopify notify your app automatically when product data changes. |
+| **4️⃣ Receive Webhook POST Requests (JSON Payload)** | Shopify sends a POST request (with product data) to your specified API endpoint whenever a registered event occurs. | Real-time product events (title, inventory, price, SKU, tags) are pushed out as JSON. |
+
+
 ### 🔄 1. Webhook Data Collection
 
 | 🔧 Component                 | ⚙️ Technology                  | 🔍 Purpose                                                       |
