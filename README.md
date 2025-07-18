@@ -16,6 +16,19 @@ Here is my shopify patner developer account :
 
 
 
+### 🌐 Supported Platforms
+
+GrowEasy is designed to integrate seamlessly with various e-commerce platforms that support inventory and product APIs. While Shopify is the primary integration, the platform is extensible to others as well:
+
+- **Shopify** – Fully supported via webhooks and REST Admin API. Automates real-time inventory analysis and pricing recommendations.
+
+- **WooCommerce** – Easily connect GrowEasy to WooCommerce stores using REST API to pull product and stock data for AI-driven forecasting.
+
+- **BigCommerce** – Integration-ready through BigCommerce’s API for retail inventory optimization and smart pricing updates.
+
+- **Magento (Adobe Commerce)** – Suitable for enterprise retailers looking to leverage machine learning for inventory and demand prediction at scale.
+
+
 
 
 ## 🤔 Why GrowEasy? — Problem vs Solution
@@ -86,7 +99,11 @@ This dashboard is built specifically for retail business owners and inventory ma
 Dashboard fully developed and owned by me as part of the GrowEasy AI-powered retail platform. Responsible for architecture, design, data integration, and deployment.
 🔗 [Live Dashboard Demo](https://your-demo-link.com) — You can explore the working example here.
 
-![Dashbord view](./Dashbord.png)  
+![Dashbord view](./Dashbord.png)
+
+## ⚙️You can add multiple store here in the seeting :
+
+
 ![Dashboard Settings](./dashbordseetings.png)
 
 ---
