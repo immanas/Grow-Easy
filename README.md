@@ -8,16 +8,10 @@
 It helps businesses sell products, track orders, manage inventory, and handle payments — all in one place.
 
 Think of it like a **digital shopping mall** that gives store owners everything they need to run a business online, without writing code.
-:
-Here is my shopify patner developer account ![GrowEasy](shopifydashbord.png)
 
+Here is my shopify patner developer account :
+![GrowEasy](shopifydashbord.png)
 
-
-### 🧠 Simple Example:
-
-> You sell t-shirts on Shopify.  
-> GrowEasy analyzes your orders and tells you:  
-> “🖤 Black T-shirt might sell 50 units next week — consider restocking.”
 
 
 
@@ -55,8 +49,7 @@ GrowEasy transforms raw Shopify store data into **actionable insights** using a 
 | ⚙️ Lambda Webhook Handler  | AWS Lambda                   | Parses webhook data and stores it in DynamoDB                   |
 | 💾 Raw Data Storage        | DynamoDB (GrowEasyWebhookLogs)| Stores incoming order/product data for further analysis          |
 
-**📷 Diagram: Webhook Flow**  
-![Shopify Dashboard](./shopifydashbord.png)  
+**📷 Diagram: Webhook Flow**   
 ![API Gateway Flow](./api_gateway_event.png)  
 ![DynamoDB Tables](./dynamodb_tables.png)
 
