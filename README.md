@@ -15,7 +15,7 @@ Here is my shopify patner developer account :
 
 
 
-### 🌐 Supported Platforms
+### 🌐 Supported Platforms : 
 
 GrowEasy is designed to integrate seamlessly with various e-commerce platforms that support inventory and product APIs. While Shopify is the primary integration, the platform is extensible to others as well:
 
