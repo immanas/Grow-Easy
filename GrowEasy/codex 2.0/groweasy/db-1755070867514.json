@@ -1,0 +1,57 @@
+{
+  "dashboard": {
+    "totalProducts": 124,
+    "totalSalesToday": 125000,
+    "forecast7d": 320,
+    "productsNeedingRestock": 12
+  },
+  "products": [
+    {
+      "id": 1,
+      "name": "Handmade Mug",
+      "stock": 25,
+      "price": 450,
+      "forecast7": 10,
+      "restockSuggestion": 0,
+      "optimalPrice": 430,
+      "expectedImpact": 8,
+      "velocity": 2
+    },
+    {
+      "id": 2,
+      "name": "Organic Tea",
+      "stock": 6,
+      "price": 250,
+      "forecast7": 20,
+      "restockSuggestion": 50,
+      "optimalPrice": 230,
+      "expectedImpact": 12,
+      "velocity": 3
+    },
+    {
+      "id": 3,
+      "name": "Notebook",
+      "stock": 0,
+      "price": 120,
+      "forecast7": 5,
+      "restockSuggestion": 100,
+      "optimalPrice": 110,
+      "expectedImpact": 15,
+      "velocity": 1
+    }
+  ],
+  "forecast": [
+    {
+      "date": "2025-07-14",
+      "value": 1200
+    },
+    {
+      "date": "2025-07-15",
+      "value": 1330
+    },
+    {
+      "date": "2025-07-16",
+      "value": 1400
+    }
+  ]
+}
