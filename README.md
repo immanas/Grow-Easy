@@ -226,12 +226,19 @@ This project was not just about coding, but about:
 
 ---
 
-### 📸 Hackathon Moments  
+### 📸 Hackathon Moments:  
 
 Here are some snapshots from my **Codex 2.0 journey** while building GrowEasy:  
-![CloudWatch Logs](./cloudwatch_logs.png)
-![CloudWatch Logs](./cloudwatch_logs.png)
-![CloudWatch Logs](./cloudwatch_logs.png)
+
+
+![CloudWatch Logs](hack.jpg)
+![CloudWatch Logs](hack1.jpg)
+
+
+
+Also, you can check from here: [LinkedIn](https://www.linkedin.com/in/me-m-gantait/)
+
+
 ✨ This experience made GrowEasy not just a project, but a **real proof of my skills in cloud, AI, and problem-solving under pressure.**
 
 
