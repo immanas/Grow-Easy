@@ -211,6 +211,31 @@ Once aggregated data is available, GrowEasy’s AI pipeline transforms it into *
 - Dashboard integration for monitoring.
 
 
+## 🏆 Hackathon Experience: Codex 2.0  
+
+I built **GrowEasy** during the **Codex 2.0 Hackathon** in just **36 hours**, working under extreme pressure with my team.  
+- ✅ **Real-life problem solving** → tackled challenges faced by small Shopify merchants like stockouts and wrong pricing.  
+- ✅ **Hands-on project building** → designed and implemented the end-to-end AI + cloud pipeline (Shopify → AWS → AI → Dashboard).  
+- ✅ **Dynamic price prediction** → added AI-driven **real-time price recommendation engine** to maximize merchant revenue.  
+- ✅ **Worked under time constraints** → completed full architecture, backend pipeline, AI forecasting, and dashboard in less than 2 days.  
+
+This project was not just about coding, but about:  
+- Thinking like a **cloud/DevOps engineer** under real-world conditions.  
+- Delivering a **production-grade system** in limited time.  
+- Learning how to handle **team collaboration, stress, and quick decision making** during a hackathon.  
+
+---
+
+### 📸 Hackathon Moments  
+
+Here are some snapshots from my **Codex 2.0 journey** while building GrowEasy:  
+![CloudWatch Logs](./cloudwatch_logs.png)
+![CloudWatch Logs](./cloudwatch_logs.png)
+![CloudWatch Logs](./cloudwatch_logs.png)
+✨ This experience made GrowEasy not just a project, but a **real proof of my skills in cloud, AI, and problem-solving under pressure.**
+
+
+
 
 ## 🙌 Contributions Welcome!
 
