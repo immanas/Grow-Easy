@@ -137,70 +137,7 @@ Dashboard fully developed and owned by me as part of the GrowEasy AI-powered ret
 
 
 
-## 🔄 Data & AI Workflow
-
-**Shopify → Lambda → S3 (raw data)**  
-Whenever a product is created, updated, or deleted in Shopify, the platform automatically sends a **webhook event** in JSON format.  
-- These webhook events are received by an **AWS API Gateway endpoint**, which forwards them to a **Lambda function**.  
-- The Lambda function stores each raw JSON payload exactly as it arrives into the S3 bucket **`groweasy-webhook-logs`**.  
-- This bucket acts as the **system of record**, keeping a full history of product changes, price updates, and inventory modifications for downstream analytics.  
-
----
-
-**Hourly Analytics Lambda → S3 (aggregated data)**  
-A second Lambda function, triggered **every hour** by **Amazon EventBridge**, processes the raw data into structured summaries.  
-- It scans new JSON files in the `groweasy-webhook-logs` bucket.  
-- Cleans and aggregates important information such as:  
-  - Inventory levels (stock available per product)  
-  - Price fluctuations and history  
-  - Sales activity trends  
-- Writes the aggregated summaries into the **`groweasy-analytics`** bucket.  
-- This creates a continuously updated **clean dataset** that is lightweight and ready for reporting or forecasting.  
-
----
-
-**AI Forecasting (SageMaker + Lambda)**  
-Once aggregated data is available, GrowEasy’s AI pipeline transforms it into **actionable predictions**.  
-- A forecasting Lambda (or SageMaker job) reads the summaries from `groweasy-analytics`.  
-- It prepares a **time-series dataset** (date, product_id, inventory, price, sales).  
-- The dataset is fed into an **LSTM-based forecasting model** in SageMaker.  
-- The AI model predicts:  
-  - 📦 **Inventory depletion** → when a product is likely to run out of stock  
-  - 💰 **Optimal pricing** → recommended price points to maximize revenue without losing sales  
-  - 📈 **Future sales** → expected sales for the next 7/30 days  
-
----
-
-**Predictions → DynamoDB + Dashboard + Alerts**  
-- AI results are written into a DynamoDB table (`ProductForecasts`) for **fast, real-time queries**.  
-- The **GrowEasy React dashboard** fetches this data via API Gateway + Lambda, showing:  
-  - Optimal price recommendations  
-  - Restock alerts  
-  - Live sales activity with forecast overlay  
-  - A **Retail Health Score (0–100)** per product/store  
-- At the same time, the pipeline triggers **SNS notifications** (email/Slack) whenever new AI forecasts are generated, e.g.:  
-  > *“⚠️ Product XYZ is projected to run out in 5 days. Suggested restock: 50 units.”*  
-
-
-
-## 🧭 Final Architecture Flow
-
-                                               |
-              Shopify Store ──▶ Webhook ▶ API Gateway ▶ Lambda (Webhook) ─▶ DynamoDB (WebhookLogs)
-                                                        │
-                        EventBridge (Hourly) ───────────┘
-                                                        ▼
-                                   Lambda (Analytics) ─▶ DynamoDB (ProductAnalytics)
-                                                        │
-                                 Lambda (Export to S3) ─▶ S3 (products.csv)
-                                                        ▼
-                                    SageMaker (LSTM Forecasting)
-                                                        ▼
-                                         DynamoDB (ForecastResults)
-                                                        │
-                              Optional Alert ───▶ SNS ─▶ Store Owner
-                                                        ▼
-                                              React Dashboard (Live View)
+## 🔄 System Design :
 
 
 
