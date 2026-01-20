@@ -137,7 +137,7 @@ Dashboard fully developed and owned by me as part of the GrowEasy AI-powered ret
 
 
 
-## 🔄 System Design :
+
 
 
 
