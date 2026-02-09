@@ -58,7 +58,8 @@ Here is my shopify patner developer account :
 
 
 
-## 🚀 Full System Architecture (overview) 
+## 🚀 Full System Architecture (overview) :
+![POST Request](groweasyy.png)
 ## High-Level System Overview
 
 ### 🔄 Shopify Integration Flow (Webhook + OAuth Lifecycle)
