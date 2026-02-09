@@ -32,7 +32,7 @@ GrowEasy is designed to integrate seamlessly with various e-commerce platforms t
 **✅ I choosed shopify here to complete my project**
 
 
-## 🤔 Why GrowEasy? — Problem vs Solution
+## 🤔 Real-Life Problem This Project Solves (Problem → Solution → Benefit)
 💢 What problems store owners face without GrowEasy
 
 ✅ How GrowEasy solves each problem
@@ -50,6 +50,24 @@ GrowEasy is designed to integrate seamlessly with various e-commerce platforms t
 | ❌ High infrastructure cost for ML pipelines                          | ☁️ Fully serverless using AWS Lambda + SageMaker + EventBridge                    | 💸 Zero server maintenance, pay-as-you-go                     |
 | ❌ No automation for restocking strategy                              | ⏰ Hourly ML pipeline auto-updates forecasts and recommendations                   | 🔄 Hands-free inventory management                           |
 | ❌ Difficult for non-tech founders to understand backend logic        | 🧱 Modular dashboard + visual insights + alerting system                           | 👩‍💼 Accessible to non-technical business users               |
+
+---
+
+## 📌 What GrowEasy IS / IS NOT
+
+### ✅ GrowEasy IS
+- A serverless, AI-driven retail optimization backend 🤖
+- Integrated with Shopify via real webhooks 🔗
+- Built on AWS using Lambda and DynamoDB ☁️
+- Designed for demand forecasting and inventory insights 📊
+- Focused on real-time data ingestion and analysis ⚡
+
+### ❌ GrowEasy is NOT
+- A full SaaS product
+- A frontend-heavy application
+- A no-code automation tool
+- A marketplace or e-commerce platform
+- A mock or simulated data project
 
 
 
