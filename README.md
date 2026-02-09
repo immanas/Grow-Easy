@@ -86,6 +86,11 @@ Here is my shopify patner developer account :
 ![API Gateway Flow](./api_gateway_event.png)  
 ![DynamoDB Tables](./dynamodb_tables.png)
 
+**📷 Diagram: Monitoring & Logging via CloudWatch**  
+
+
+![CloudWatch Logs](./cloudwatch_logs.png)
+
 ---
 
 ### ⏱️ 2.ML Pipeline Design (Forecasting Flow)
@@ -133,15 +138,15 @@ Dashboard fully developed and owned by me as part of the GrowEasy AI-powered ret
 | 🔎 X-Ray              | AWS X-Ray                      | Full trace of requests across services         |
 
 
-**📷 Diagram: Monitoring & Logging via CloudWatch**  
+## 💰 Cost Awareness & Trade-offs
 
+- Serverless compute reduces idle infrastructure costs ☁️
+- DynamoDB chosen for **pay-per-request scaling** 📦
+- Avoided managed ML pipelines to prevent unnecessary expenses 💸
+- No always-on servers or containers 🚫
 
-![CloudWatch Logs](./cloudwatch_logs.png)
-
-
-
-
-
+**Trade-off:**  
+Lower operational cost at the expense of advanced training pipelines and model complexity.
 
 
 ## 📊 Features
@@ -182,7 +187,36 @@ Also, you can check from here: [LinkedIn](https://www.linkedin.com/in/me-m-ganta
 
 ✨ This experience made GrowEasy not just a project, but a **real proof of my skills in cloud, AI, and problem-solving under pressure.**
 
+## 💰 Cost Awareness & Trade-offs
 
+- Serverless compute reduces idle infrastructure costs ☁️
+- DynamoDB chosen for **pay-per-request scaling** 📦
+- Avoided managed ML pipelines to prevent unnecessary expenses 💸
+- No always-on servers or containers 🚫
+
+**Trade-off:**  
+Lower operational cost at the expense of advanced training pipelines and model complexity.
+
+---
+
+## ⚠️ Explicit Limitations
+
+- No production-grade authentication or access control 🔐
+- No automated CI/CD pipeline 🔄
+- No real-time dashboard or frontend interface 🖥️
+- Forecasting models are basic and not continuously retrained 📉
+- Not designed for multi-tenant production workloads 🏢
+
+---
+
+## 🎯 What This Project Demonstrates About Me
+
+- Ability to design **serverless, event-driven architectures** ⚙️
+- Hands-on experience with **AWS Lambda and DynamoDB** ☁️
+- Real-world **third-party API integration** (Shopify webhooks) 🔗
+- Practical understanding of **cloud cost trade-offs** 💰
+- Ability to build **end-to-end data pipelines** 🔄
+- Focus on **working systems, not theoretical designs** 🧪
 
 
 ## 🙌 Contributions Welcome!
