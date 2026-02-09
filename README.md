@@ -14,22 +14,9 @@ Here is my shopify patner developer account :
 
 ![GrowEasy](shopifydashbord.png)
 
-
-
-### 🌐 Supported Platforms : 
-
-GrowEasy is designed to integrate seamlessly with various e-commerce platforms that support inventory and product APIs. While Shopify is the primary integration, the platform is extensible to others as well:
-
-- **Shopify** – Fully supported via webhooks and REST Admin API. Automates real-time inventory analysis and pricing recommendations.
-
-- **WooCommerce** – Easily connect GrowEasy to WooCommerce stores using REST API to pull product and stock data for AI-driven forecasting.
-
-- **BigCommerce** – Integration-ready through BigCommerce’s API for retail inventory optimization and smart pricing updates.
-
-- **Magento (Adobe Commerce)** – Suitable for enterprise retailers looking to leverage machine learning for inventory and demand prediction at scale.
-
-
-**✅ I choosed shopify here to complete my project**
+### 🌐 Supported Platforms
+- **Shopify** (primary via webhooks & Admin API), **WooCommerce** (REST API), **BigCommerce** (official APIs), **Magento / Adobe Commerce** (enterprise-scale forecasting).
+- ✅ I choosed shopify here to complete my project
 
 
 ## 🤔 Real-Life Problem This Project Solves (Problem → Solution → Benefit)
@@ -71,11 +58,10 @@ GrowEasy is designed to integrate seamlessly with various e-commerce platforms t
 
 
 
-## 🚀 Full System Architecture 
-GrowEasy transforms raw Shopify store data into **actionable insights** using a fully serverless, AI-driven AWS pipeline.
-🧠 Built entirely using modern AI & cloud-native AWS technologies:
+## 🚀 Full System Architecture (overview) 
+## High-Level System Overview
 
-### 🔄 Pre-AWS Steps in GrowEasy Integration
+### 🔄 Shopify Integration Flow (Webhook + OAuth Lifecycle)
 
 | 🔢 Step | 📝 Description | 🔍 Why It Matters |
 |--------|----------------|-------------------|
@@ -85,7 +71,7 @@ GrowEasy transforms raw Shopify store data into **actionable insights** using a 
 | **4️⃣ Receive Webhook POST Requests (JSON Payload)** | Shopify sends a POST request (with product data) to your specified API endpoint whenever a registered event occurs. | Real-time product events (title, inventory, price, SKU, tags) are pushed out as JSON. |
 
 
-### 🔄 1. Webhook Data Collection
+### 🔄 1. Data Flow / Request Lifecycle (End-to-End)
 
 | 🔧 Component                 | ⚙️ Technology                  | 🔍 Purpose                                                       |
 |----------------------------|------------------------------|------------------------------------------------------------------|
@@ -102,7 +88,7 @@ GrowEasy transforms raw Shopify store data into **actionable insights** using a 
 
 ---
 
-### ⏱️ 2. Scheduled ML Pipeline (AutoPipeline)
+### ⏱️ 2.ML Pipeline Design (Forecasting Flow)
 
 | 🔧 Component                  | ⚙️ Technology                | 🔍 Purpose                                                       |
 |-----------------------------|-----------------------------|------------------------------------------------------------------|
@@ -115,7 +101,7 @@ GrowEasy transforms raw Shopify store data into **actionable insights** using a 
 
 ---
 
-### 📈 3. Real-Time Dashboard
+### 📈 3. Observability & Monitoring (Logs, Metrics, Traces)
 
 | 🔧 Component               | ⚙️ Technology                  | 🔍 Purpose                                                       |
 |--------------------------|------------------------------|------------------------------------------------------------------|
@@ -138,8 +124,7 @@ Dashboard fully developed and owned by me as part of the GrowEasy AI-powered ret
 
 ---
 
-### 🛠️ DevOps & Monitoring
-
+### 🛠️ DevOps & Deployment Strategy
 | 🔧 Component           | ⚙️ Technology                    | 🔍 Purpose                                      |
 |----------------------|--------------------------------|------------------------------------------------|
 | 🛡️ IAM               | AWS IAM Roles & Policies       | Secure, least-privilege access control         |
