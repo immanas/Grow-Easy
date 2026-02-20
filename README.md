@@ -1,22 +1,12 @@
 # 🛍️ GrowEasy: AI‑Driven Retail Optimization for Shopify Stores
 🌟 GrowEasy – AI‑Powered Inventory &amp; Pricing Optimization for Shopify  Unlock smart retail management with real-time demand forecasting, automated insights, and a full serverless architecture—built entirely on AWS with SageMaker, Lambda, DynamoDB, and React.
 
-
-## 🛍️ What is Shopify?
-
-
-[Shopify](https://www.shopify.com) is a popular **e-commerce platform** that allows anyone to easily create and manage an online store.  shopify dashbord.png.png
-It helps businesses sell products, track orders, manage inventory, and handle payments — all in one place.
-Think of it like a **digital shopping mall** that gives store owners everything they need to run a business online, without writing code.
-
-Here is my shopify patner developer account :
-
+**[Shopify](https://www.shopify.com)** 🛍️  is a popular **e-commerce platform**, Shopify is selected as the primary integration platform for this project.
 
 ![GrowEasy](shopifydashbord.png)
 
 ### 🌐 Supported Platforms
 - **Shopify** (primary via webhooks & Admin API), **WooCommerce** (REST API), **BigCommerce** (official APIs), **Magento / Adobe Commerce** (enterprise-scale forecasting).
-- ✅ I choosed shopify here to complete my project
 
 
 ## 🤔 Real-Life Problem This Project Solves (Problem → Solution → Benefit) :
@@ -92,11 +82,9 @@ GrowEasy/
 | Serverless Processing Architecture — Built using AWS Lambda, EventBridge, and DynamoDB for scalable, event-driven execution | Not a server-based backend requiring infrastructure management |
 | Inventory Optimization Engine — Provides actionable insights on stock levels, demand trends, and restocking needs | Not a passive reporting tool with no decision support |
 | Automated Workflow Pipeline — Scheduled ML jobs update forecasts and insights without manual intervention | Not a one-time analysis or offline ML experiment |
-| Shopify-Native Integration — Uses real Shopify webhooks and APIs for live store data ingestion | Not a mock or simulated e-commerce dataset |
 | Cost-Efficient Cloud Design — Fully serverless architecture minimizing idle infrastructure cost | Not a heavy ML pipeline with high operational overhead |
-| Production-Oriented Backend System — Designed as a deployable, end-to-end data pipeline (ingestion → processing → forecasting → insights) | Not a frontend-heavy demo or UI-focused project |
 
-### 🔄 Shopify Integration & Request Lifecycle :
+### 🔄  Request Lifecycle (End-to-End) :
 
 GrowEasy integrates directly with Shopify using webhooks and a serverless backend pipeline to enable real-time data processing.
 
@@ -135,7 +123,6 @@ The system is monitored end-to-end for reliability, visibility, and debugging:
 
 - 🔗 **API Layer (API Gateway + Lambda)** → Serves latest forecast data to the dashboard  
 - 📊 **Visualization (React + Recharts)** → Displays trends, forecasts, and usage insights  
-- 📊 **Logging & Metrics (CloudWatch)** → Tracks Lambda execution, errors, and system behavior  
 - 🔍 **Tracing (X-Ray)** → Provides request-level visibility across services  
 - 🔐 **Access Control (IAM)** → Enforces secure, least-privilege access  
 
@@ -175,8 +162,7 @@ Dashboard fully developed and owned by me as part of the GrowEasy AI-powered ret
 - Shopify Webhooks — real-time event ingestion (products, updates, orders)  
 
 **🧠 Machine Learning**
-- Amazon SageMaker — LSTM-based demand forecasting  
-- Python (NumPy, Pandas, Scikit-learn) — data processing and model logic  
+- Amazon SageMaker — LSTM-based demand forecasting    
 
 **⚙️ Orchestration & Automation**
 - Amazon EventBridge — schedules periodic ML jobs and pipeline execution  
@@ -195,53 +181,42 @@ Dashboard fully developed and owned by me as part of the GrowEasy AI-powered ret
 
 ## ⚡ Quickstart (Run in ~30 seconds) :
 
-### 1️⃣ Clone the repository 
+ **1️⃣ Clone the repository** 
 
 ```bash
 git clone https://github.com/your-username/groweasy.git
 ```
-cd groweasy
 
-2️⃣ Setup Backend (Webhook + Lambda logic)
+**2️⃣ Setup Backend**
 
-Navigate to backend folder:
 - cd GrowEasy/Backend
-- Update your Shopify webhook URL (API Gateway endpoint)
-- Deploy Lambda functions manually via AWS Console or zip upload
-
-3️⃣ Configure Shopify Webhooks
-
-Create a Shopify app from Partner Dashboard
-Add webhook endpoint (API Gateway URL)
-Subscribe to:
+- Update webhook endpoint (API Gateway URL)
+- Deploy Lambda functions (AWS Console / ZIP)
+  
+**3️⃣ Configure Shopify Webhooks**
+- Add API Gateway endpoint in Shopify
+- Subscribe to:
 ```
 products/create
 products/update
 orders/create
 ```
-4️⃣ Run Forecasting Pipeline
+**4️⃣ Run Forecasting Pipeline**
 
-- Upload historical data (or use existing data inside /data)
-- Open SageMaker notebook:
-- Sagemaker/forecasting-notebook.ipynb
-- Train model and generate forecast output
+- Upload historical data to /data
+- Run: Sagemaker/forecasting-notebook.ipynb
 
-5️⃣ Run Frontend Dashboard
-- cd codex\ 2.0/groweasy
-- npm install
-- npm start
-
+**5️⃣ Run Frontend Dashboard**
+```
+cd "codex 2.0/groweasy"
+npm install
+npm start
+```
 ## 🏆 Hackathon Experience: Codex 2.0  
 
 I built **GrowEasy** during the **Codex 2.0 Hackathon** in just **36 hours**, working under extreme pressure with my team.  
 - ✅ **Real-life problem solving** → tackled challenges faced by small Shopify merchants like stockouts and wrong pricing.  
-- ✅ **Hands-on project building** → designed and implemented the end-to-end AI + cloud pipeline (Shopify → AWS → AI → Dashboard).  
-- ✅ **Worked under time constraints** → completed full architecture, backend pipeline, AI forecasting, and dashboard in less than 2 days.  
-
-This project was not just about coding, but about:  
-- Thinking like a **cloud/DevOps engineer** under real-world conditions.  
-- Delivering a **production-grade system** in limited time.  
-- Learning how to handle **team collaboration, stress, and quick decision making** during a hackathon.
+- ✅ **Hands-on project building** → designed and implemented the end-to-end AI + cloud pipeline (Shopify → AWS → AI → Dashboard).
 - 
 ### 📸 Hackathon Moments:  
 Here are some snapshots from my **Codex 2.0 journey** while building GrowEasy:  
