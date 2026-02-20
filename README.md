@@ -34,7 +34,7 @@ Here is my shopify patner developer account :
 
 
 ## 🚀 Full System Architecture (overview) :
-![POST Request](groweasyy.png)
+![POST Request](GrowEasy/assets/groweasy.png)
 
 ## 📁 Project Structure (Current State) :
 
@@ -190,7 +190,46 @@ Dashboard fully developed and owned by me as part of the GrowEasy AI-powered ret
 - Recharts — data visualization (trends, forecasts, insights)  
 
 **🔐 Security**
-- AWS IAM — role-based access control with least privilege  
+- AWS IAM — role-based access control with least privilege
+
+
+## ⚡ Quickstart (Run in ~30 seconds) :
+
+### 1️⃣ Clone the repository 
+
+```bash
+git clone https://github.com/your-username/groweasy.git
+```
+cd groweasy
+
+2️⃣ Setup Backend (Webhook + Lambda logic)
+
+Navigate to backend folder:
+- cd GrowEasy/Backend
+- Update your Shopify webhook URL (API Gateway endpoint)
+- Deploy Lambda functions manually via AWS Console or zip upload
+
+3️⃣ Configure Shopify Webhooks
+
+Create a Shopify app from Partner Dashboard
+Add webhook endpoint (API Gateway URL)
+Subscribe to:
+```
+products/create
+products/update
+orders/create
+```
+4️⃣ Run Forecasting Pipeline
+
+- Upload historical data (or use existing data inside /data)
+- Open SageMaker notebook:
+- Sagemaker/forecasting-notebook.ipynb
+- Train model and generate forecast output
+
+5️⃣ Run Frontend Dashboard
+- cd codex\ 2.0/groweasy
+- npm install
+- npm start
 
 ## 🏆 Hackathon Experience: Codex 2.0  
 
