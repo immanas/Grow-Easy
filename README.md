@@ -36,7 +36,53 @@ Here is my shopify patner developer account :
 ## 🚀 Full System Architecture (overview) :
 ![POST Request](groweasyy.png)
 
+## 📁 Project Structure (Current State) :
 
+This repository contains backend webhook ingestion, ML forecasting pipeline, and a React dashboard — built during rapid development, so structure reflects functional grouping rather than strict layering.
+```
+GrowEasy/
+│
+├── Backend/  # Core backend logic (Shopify → AWS pipeline)
+│   │
+│   ├── Register_Webhook/
+│   │   ├── register_webhook.py   # Registers Shopify webhooks via Admin API
+│   │   └── GrowEasy.txt          # Notes / webhook payload reference
+│   │
+│   ├── Webhook_Handler/
+│   │   ├── webhookhandler.py     # Processes incoming webhook POST requests
+│   │   └── what it does.txt      # Explanation of handler logic
+│   │
+│   ├── forecast_result_writter/
+│   │   ├── forecastResult.py     # Writes ML forecast output
+│   │   └── what it does.txt      # Description of forecasting output logic
+│   │
+│   ├── forecast_trigger/
+│   │   ├── index.js              # Triggers forecasting pipeline (EventBridge/Lambda)
+│   │   └── what it does.txt      # Notes on trigger behavior
+│
+├── data/  # Dataset used for ML pipeline
+│   ├── befor-forcast.csv         # Raw historical product/order data
+│   └── after forecast.txt        # Forecast output results
+│
+├── Sagemaker/  # ML experimentation & training
+│   └── forecasting-notebook.ipynb  # LSTM model training notebook
+│
+├── codex 2.0/groweasy/  # Frontend (hackathon dashboard build)
+│   │
+│   ├── public/  # Static assets
+│   ├── src/     # React components & UI logic
+│   ├── package.json
+│   └── tailwind.config.js
+│
+├── assets/  # Supporting files (images, references)
+│
+├── README.md          # Project documentation
+├── LICENSE            # License file
+├── Dashboard.png      # UI preview
+├── api_gateway_event.png   # API flow proof
+├── cloudwatch_logs.png     # Monitoring proof
+└── dynamodb_tables.png     # Data storage proof
+```
 ## 📈 Core Features :
 
 | ✅ What This Project IS | ❌ What This Project is NOT |
